@@ -1,3 +1,4 @@
+import Router from "Router";
 import Header from "components/layouts/header/Header/Header";
 import { SnackbarProvider } from "notistack";
 import { useState } from "react";
@@ -26,7 +27,7 @@ const App = () => {
         <AppLayout>
           <SnackbarProvider>
             <Header />
-            {/* <Router /> */}
+            <Router />
           </SnackbarProvider>
         </AppLayout>
       </ThemeProvider>

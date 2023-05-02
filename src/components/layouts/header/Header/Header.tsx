@@ -1,10 +1,10 @@
-import { DarkmodeSwitchContainer } from "../DarkmodeSwitchContainer/DarkmodeSwitchContainer";
+import DarkmodeSwitch from "../DarkmodeSwitch/DarkmodeSwitch";
 import { Container } from "./Header.style";
 
 const Header = () => {
   return (
     <Container>
-      <DarkmodeSwitchContainer />
+      <DarkmodeSwitch />
     </Container>
   );
 };

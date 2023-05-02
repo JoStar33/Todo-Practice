@@ -1,18 +1,12 @@
 import Toggle from "components/atomics/switch/Toggle";
-import { useMemo } from "react";
-import { setThemeModeToLocalStorage } from "styles/themeStyles";
-import { themeModeType } from "types/themeTypes";
+import { useContext, useMemo } from "react";
+import { getThemeModeFromLocalStorage, setThemeModeToLocalStorage } from "styles/themeStyles";
+import { Context } from "utils/Context";
 import { Container } from "./DarkmodeSwitch.style";
 
-interface DarkmodeSwitchProps {
-  currentThemeMode: themeModeType;
-  changeThemeMode: (newThemeMode: themeModeType) => void;
-}
-
-export const DarkmodeSwitch = ({
-  currentThemeMode,
-  changeThemeMode,
-}: DarkmodeSwitchProps) => {
+const DarkmodeSwitch = () => {
+  const currentThemeMode = getThemeModeFromLocalStorage();
+  const { changeThemeMode } = useContext(Context);
   const handleThemeChange = () => {
     if (currentThemeMode === "darkTheme") {
       changeThemeMode("lightTheme");
@@ -31,3 +25,5 @@ export const DarkmodeSwitch = ({
     </Container>
   );
 };
+
+export default DarkmodeSwitch;
