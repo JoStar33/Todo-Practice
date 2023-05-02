@@ -56,4 +56,4 @@ const Card = styled(DivCenter)`
   }
 `;
 
-export { Button, CounterControlButton, Card, ButtonCenter };
+export { Button, CounterControlButton, Card, ButtonCenter, DivCenter };

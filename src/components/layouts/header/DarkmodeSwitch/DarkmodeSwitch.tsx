@@ -1,4 +1,4 @@
-import Toggle from "components/atomics/switch/Toggle";
+import Toggle from "components/atoms/switch/Toggle";
 import { useContext, useMemo } from "react";
 import { getThemeModeFromLocalStorage, setThemeModeToLocalStorage } from "styles/themeStyles";
 import { Context } from "utils/Context";
