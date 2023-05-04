@@ -15,7 +15,7 @@ const DefaultTable = ({
   rowClick = () => {},
 }: Props) => {
   return (
-    <div>
+    <>
       <DefaultTableContainer>
         <caption>{tableTitle}</caption>
         <thead>
@@ -31,7 +31,7 @@ const DefaultTable = ({
           ))}
         </tbody>
       </DefaultTableContainer>
-    </div>
+    </>
   );
 };
 

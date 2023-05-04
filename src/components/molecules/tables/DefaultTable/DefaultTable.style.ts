@@ -5,7 +5,7 @@ export const DefaultTableContainer = styled.table`
   font-size: 1.4em;
   font-weight: 800;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
   border-radius: 5px;
   overflow: hidden;
