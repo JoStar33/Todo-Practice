@@ -7,13 +7,13 @@ const menus: Menu[] = [
     id: "1",
     icon: <BsCardHeading />,
     label: "카드타입",
-    click: () => {},
+    router: "/",
   },
   {
     id: "2",
     icon: <AiOutlineTable />,
     label: "테이블타입",
-    click: () => {},
+    router: "/table",
   }
 ];
 

@@ -3,7 +3,9 @@ import Header from "components/layouts/header/Header/Header";
 import { SnackbarProvider } from "notistack";
 import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { BrowserRouter } from "react-router-dom";
 import styled, { DefaultTheme, ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./styles/GlobalStyles";
 import {
   getThemeModeFromLocalStorage,
   getThemeObject,
@@ -29,9 +31,12 @@ const App = () => {
       <Context.Provider value={{ changeThemeMode }}>
         <ThemeProvider theme={currentTheme}>
           <AppLayout>
+            <GlobalStyles/>
             <SnackbarProvider>
-              <Header />
-              <Router />
+              <BrowserRouter>
+                <Header />
+                <Router />
+              </BrowserRouter>
             </SnackbarProvider>
           </AppLayout>
         </ThemeProvider>

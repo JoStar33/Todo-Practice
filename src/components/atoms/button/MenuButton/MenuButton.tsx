@@ -3,11 +3,12 @@ import { MenuButtonContainer } from "./MenuButton.style";
 interface Props {
   icon: React.ReactNode;
   label: string;
+  handleClick: () => void;
 }
 
-const MenuButton = ({ icon, label }: Props) => {
+const MenuButton = ({ icon, label, handleClick }: Props) => {
   return (
-    <MenuButtonContainer>
+    <MenuButtonContainer onClick={handleClick}>
       {icon}
       {label}
     </MenuButtonContainer>
