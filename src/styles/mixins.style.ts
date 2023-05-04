@@ -22,6 +22,25 @@ const Button = styled(ButtonCenter)`
   font-weight: 800;
 `;
 
+const PageContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+const PageHeader = styled.div`
+width: 90vw;
+height: 10vh;
+display: flex;
+align-items: center;
+h1 {
+  color: ${(props) => props.theme.textColor_primary};
+}
+`;
+
 const CounterControlButton = styled(ButtonCenter)`
   cursor: pointer;
   width: 5vw;
@@ -56,4 +75,4 @@ const Card = styled(DivCenter)`
   }
 `;
 
-export { Button, CounterControlButton, Card, ButtonCenter, DivCenter };
+export { Button, CounterControlButton, Card, ButtonCenter, DivCenter, PageContainer, PageHeader };
