@@ -1,8 +1,10 @@
+import { TableHeader } from "types/tables";
+
 interface Props {
   header: TableHeader;
 }
 
-const TableHeader = ({ header }: Props) => {
+const TableHeaderElement = ({ header }: Props) => {
   return (
     <tr>
       {
@@ -13,4 +15,4 @@ const TableHeader = ({ header }: Props) => {
   );
 };
 
-export default TableHeader;
+export default TableHeaderElement;

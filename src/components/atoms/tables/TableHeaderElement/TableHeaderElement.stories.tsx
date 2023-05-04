@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react';
-import TableHeader from './TableHeader';
+import TableHeader from './TableHeaderElement';
 
 export default {
   title: '컴포넌트/아토믹/테이블/TableHeader',

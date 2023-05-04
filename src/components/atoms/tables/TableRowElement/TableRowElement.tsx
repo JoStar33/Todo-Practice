@@ -1,11 +1,12 @@
 import { useMemo } from "react";
+import { TableRow } from "types/tables";
 
 interface Props {
   row: TableRow;
   rowClick?: () => void;
 }
 
-const TableRow = ({row, rowClick}: Props) => {
+const TableRowElement = ({row, rowClick}: Props) => {
   const rowValues = useMemo(() => {
     const showedRow = {...row};
     delete showedRow.id;
@@ -22,4 +23,4 @@ const TableRow = ({row, rowClick}: Props) => {
   );
 };
 
-export default TableRow;
+export default TableRowElement;
