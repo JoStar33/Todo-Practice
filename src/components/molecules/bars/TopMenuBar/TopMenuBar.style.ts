@@ -7,7 +7,6 @@ const TopMenuBarContainer = styled.div`
   flex-direction: row;
   padding-left: 4rem;
   height: 4rem;
-  background-color: grey;
 `;
 
 export { TopMenuBarContainer };

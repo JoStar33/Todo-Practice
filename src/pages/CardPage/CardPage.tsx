@@ -1,5 +1,5 @@
 
-const MainPage = () => {
+const CardPage = () => {
   return (
     <div>
       
@@ -7,4 +7,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default CardPage;
