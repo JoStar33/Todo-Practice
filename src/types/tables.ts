@@ -1,13 +1,16 @@
 //테이블 줄에는 반드시 id값을 명시하시길 바랍니다.
-export interface TableRow {
+interface TableRow {
   [rowKey: string]: string;
 }
 
-export interface TableHeader {
+interface TableHeader {
   [rowKey: string]: string;
 }
 
-export interface TableData {
+interface TableData {
   tableHeader: TableHeader;
   tableRow: TableRow[];
 }
+
+export type { TableRow, TableHeader, TableData };
+

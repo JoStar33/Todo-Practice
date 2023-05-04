@@ -1,5 +1,5 @@
-import TableHeader from "components/atoms/tables/TableHeader/TableHeader";
-import TableRow from "components/atoms/tables/TableRow/TableRow";
+import TableHeaderElement from "components/atoms/tables/TableHeaderElement/TableHeaderElement";
+import TableRowElement from "components/atoms/tables/TableRowElement/TableRowElement";
 import { TableData } from "types/tables";
 import { DefaultTableContainer } from './DefaultTable.style';
 
@@ -19,11 +19,11 @@ const DefaultTable = ({
       <DefaultTableContainer>
         <caption>{tableTitle}</caption>
         <thead>
-          <TableHeader header={tableData.tableHeader} />
+          <TableHeaderElement header={tableData.tableHeader} />
         </thead>
         <tbody>
           {tableData.tableRow.map((row) => (
-            <TableRow
+            <TableRowElement
               key={row.id}
               row={row}
               rowClick={() => rowClick(row.id)}

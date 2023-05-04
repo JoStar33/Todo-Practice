@@ -1,9 +1,12 @@
+import { PageContainer, PageHeader } from "styles/mixins.style";
 
 const TablePage = () => {
   return (
-    <div>
-      
-    </div>
+    <PageContainer>
+      <PageHeader>
+        <h1>테이블타입</h1>
+      </PageHeader>
+    </PageContainer>
   );
 };
 
