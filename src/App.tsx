@@ -2,6 +2,7 @@ import Router from "Router";
 import Header from "components/layouts/header/Header/Header";
 import { SnackbarProvider } from "notistack";
 import { useState } from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 import styled, { DefaultTheme, ThemeProvider } from "styled-components";
 import {
   getThemeModeFromLocalStorage,
@@ -10,6 +11,8 @@ import {
 } from "./styles/themeStyles";
 import { themeModeType } from "./types/themeTypes";
 import { Context } from "./utils/Context";
+
+const queryClient = new QueryClient();
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState<DefaultTheme>(
@@ -22,16 +25,18 @@ const App = () => {
     });
   };
   return (
-    <Context.Provider value={{ changeThemeMode }}>
-      <ThemeProvider theme={currentTheme}>
-        <AppLayout>
-          <SnackbarProvider>
-            <Header />
-            <Router />
-          </SnackbarProvider>
-        </AppLayout>
-      </ThemeProvider>
-    </Context.Provider>
+    <QueryClientProvider client={queryClient}>
+      <Context.Provider value={{ changeThemeMode }}>
+        <ThemeProvider theme={currentTheme}>
+          <AppLayout>
+            <SnackbarProvider>
+              <Header />
+              <Router />
+            </SnackbarProvider>
+          </AppLayout>
+        </ThemeProvider>
+      </Context.Provider>
+    </QueryClientProvider>
   );
 };
 
