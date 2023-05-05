@@ -1,7 +1,7 @@
 import Router from "Router";
 import Header from "components/layouts/header/Header/Header";
 import { SnackbarProvider } from "notistack";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter } from "react-router-dom";
 import styled, { DefaultTheme, ThemeProvider } from "styled-components";
@@ -13,6 +13,7 @@ import {
 } from "./styles/themeStyles";
 import { themeModeType } from "./types/themeTypes";
 import { Context } from "./utils/Context";
+import ValidateDialog from "components/molecules/dialogs/ValidateDialog/ValidateDialog";
 
 const queryClient = new QueryClient();
 
@@ -26,9 +27,15 @@ const App = () => {
       return getThemeObject(getThemeModeFromLocalStorage());
     });
   };
+  const dialogText = useRef<string>('');
+  const [dialogShow, setDialogShow] = useState<boolean>(false);
+  const setDialog = (text: string, isShow: boolean) => {
+    setDialogShow(isShow);
+    dialogText.current = text;
+  }
   return (
     <QueryClientProvider client={queryClient}>
-      <Context.Provider value={{ changeThemeMode }}>
+      <Context.Provider value={{ changeThemeMode, setDialog }}>
         <ThemeProvider theme={currentTheme}>
           <AppLayout>
             <GlobalStyles/>
@@ -36,6 +43,7 @@ const App = () => {
               <BrowserRouter>
                 <Header />
                 <Router />
+                <ValidateDialog dialogShow={dialogShow} dialogText={dialogText.current} handleDialog={() => setDialogShow(false)}/>
               </BrowserRouter>
             </SnackbarProvider>
           </AppLayout>
