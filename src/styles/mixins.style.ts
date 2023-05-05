@@ -12,7 +12,6 @@ const DivCenter = styled.div`
   justify-content: center;
 `;
 
-
 const Button = styled(ButtonCenter)`
   max-height: 4rem;
   line-height: 2rem;
@@ -36,6 +35,7 @@ const Input = styled.input`
   border-radius: 5px;
   border: 2px solid black;
   outline: none;
+  width: 80vw;
   &:focus {
     border: #6597f1 solid 3px;
   }
@@ -44,16 +44,17 @@ const Input = styled.input`
 const InputTitle = styled.label`
   font-size: 1.3rem;
   font-weight: 800;
+  color: ${(props) => props.theme.textColor_primary};
 `;
 
 const PageHeader = styled.div`
-width: 90vw;
-height: 10vh;
-display: flex;
-align-items: center;
-h1 {
-  color: ${(props) => props.theme.textColor_primary};
-}
+  width: 90vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  h1 {
+    color: ${(props) => props.theme.textColor_primary};
+  }
 `;
 
 const CounterControlButton = styled(ButtonCenter)`
@@ -90,4 +91,14 @@ const Card = styled(DivCenter)`
   }
 `;
 
-export { Input, InputTitle, Button, CounterControlButton, Card, ButtonCenter, DivCenter, PageContainer, PageHeader };
+export {
+  Input,
+  InputTitle,
+  Button,
+  CounterControlButton,
+  Card,
+  ButtonCenter,
+  DivCenter,
+  PageContainer,
+  PageHeader,
+};
