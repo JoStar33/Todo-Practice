@@ -31,6 +31,21 @@ const PageContainer = styled.div`
   flex-direction: column;
 `;
 
+const Input = styled.input`
+  font-size: 1.4rem;
+  border-radius: 5px;
+  border: 2px solid black;
+  outline: none;
+  &:focus {
+    border: #6597f1 solid 3px;
+  }
+`;
+
+const InputTitle = styled.label`
+  font-size: 1.3rem;
+  font-weight: 800;
+`;
+
 const PageHeader = styled.div`
 width: 90vw;
 height: 10vh;
@@ -75,4 +90,4 @@ const Card = styled(DivCenter)`
   }
 `;
 
-export { Button, CounterControlButton, Card, ButtonCenter, DivCenter, PageContainer, PageHeader };
+export { Input, InputTitle, Button, CounterControlButton, Card, ButtonCenter, DivCenter, PageContainer, PageHeader };
