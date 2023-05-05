@@ -1,4 +1,4 @@
-import { GET_TODOS, POST_TODOS } from "constants/todoConstants";
+import { GET_TODOS, POST_TODOS, DELETE_TODOS } from "constants/todoConstants";
 import { Todos, PostedTodos } from "types/todos";
 import { customAxios } from "./axios/customAxios";
 
@@ -15,4 +15,8 @@ const postTodos = (postedTodos: PostedTodos) => {
   return customAxios.post(POST_TODOS, { todo: postedTodos });
 };
 
-export { getTodos, postTodos };
+const deleteTodos = (id: string) => {
+  return customAxios.delete(DELETE_TODOS(id));
+};
+
+export { getTodos, postTodos, deleteTodos };
