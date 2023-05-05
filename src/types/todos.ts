@@ -6,5 +6,10 @@ interface Todos extends TableRow{
   description: string;
 }
 
-export type { Todos };
+interface PostedTodos {
+  title: string;
+  description: string;
+}
+
+export type { Todos, PostedTodos };
 

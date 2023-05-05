@@ -1,3 +1,4 @@
 const GET_TODOS = '/todo';
-export { GET_TODOS };
+const POST_TODOS = '/todo';
+export { GET_TODOS, POST_TODOS };
 

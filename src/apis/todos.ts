@@ -1,5 +1,5 @@
-import { GET_TODOS } from "constants/todoConstants";
-import { Todos } from "types/todos";
+import { GET_TODOS, POST_TODOS } from "constants/todoConstants";
+import { Todos, PostedTodos } from "types/todos";
 import { customAxios } from "./axios/customAxios";
 
 const getTodos = () => {
@@ -11,5 +11,8 @@ const getTodos = () => {
   return todos;
 };
 
-export { getTodos };
+const postTodos = (postedTodos: PostedTodos) => {
+  return customAxios.post(POST_TODOS, { todo: postedTodos });
+};
 
+export { getTodos, postTodos };
