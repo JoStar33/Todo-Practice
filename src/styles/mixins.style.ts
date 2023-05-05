@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const ButtonCenter = styled.button`
   display: flex;
@@ -57,6 +57,20 @@ const PageHeader = styled.div`
   }
 `;
 
+const skeletonGradient = keyframes`
+    0% {
+        background-color: rgba(165, 165, 165, 0.1);
+    }
+
+    50% {
+        background-color: rgba(165, 165, 165, 0.3);
+    }
+
+    100% {
+        background-color: rgba(165, 165, 165, 0.1);
+    }
+`;
+
 const CounterControlButton = styled(ButtonCenter)`
   cursor: pointer;
   width: 5vw;
@@ -101,4 +115,5 @@ export {
   DivCenter,
   PageContainer,
   PageHeader,
+  skeletonGradient
 };
