@@ -2,6 +2,7 @@ import type { Preview } from "@storybook/react";
 import { initialize, mswDecorator } from 'msw-storybook-addon';
 import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { BrowserRouter } from "react-router-dom";
 import { handlers } from '../src/mocks/handlers';
 
 // if (typeof global.process === "undefined") {
@@ -23,7 +24,9 @@ initialize({
 // Provide the MSW addon decorator globally
 export const decorators = [(Story) => (
   <QueryClientProvider client={queryClient}>
-    <Story />
+    <BrowserRouter>
+      <Story />
+    </BrowserRouter>
   </QueryClientProvider>
 ), mswDecorator];
 
