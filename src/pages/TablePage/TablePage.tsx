@@ -1,5 +1,5 @@
 import DefaultTable from "components/molecules/tables/DefaultTable/DefaultTable";
-import { useTodosQuery } from "hooks/todos/useTodosQuery";
+import { useTodosQuery } from "hooks/todos/useTodosQuery/useTodosQuery";
 import { PageContainer, PageHeader } from "styles/mixins.style";
 
 const TablePage = () => {

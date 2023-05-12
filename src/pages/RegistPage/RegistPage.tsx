@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
-import { PageContainer, PageHeader } from 'styles/mixins.style';
-import TextArea from 'components/atoms/inputs/TextArea/TextArea';
-import Input from 'components/atoms/inputs/Input/Input';
 import RegistButton from 'components/atoms/button/RegistButton/RegistButton';
-import { useTodosMutation } from 'hooks/todos/useTodosMutation';
+import Input from 'components/atoms/inputs/Input/Input';
+import TextArea from 'components/atoms/inputs/TextArea/TextArea';
+import { useTodosMutation } from 'hooks/todos/useTodosMutation/useTodosMutation';
+import { useRef } from 'react';
+import { PageContainer, PageHeader } from 'styles/mixins.style';
 
 const RegistPage = () => {
   const inputAreaRef = useRef<HTMLInputElement>(null);

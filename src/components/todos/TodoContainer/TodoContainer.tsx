@@ -1,7 +1,7 @@
 import TodoItem from "components/molecules/cards/TodoItem/TodoItem";
-import { useTodosQuery } from "hooks/todos/useTodosQuery";
+import { useDeleteTodosMutation } from "hooks/todos/useDeleteTodosMutation/useDeleteTodosMutation";
+import { useTodosQuery } from "hooks/todos/useTodosQuery/useTodosQuery";
 import { Container } from "./TodoContainer.style";
-import { useDeleteTodosMutation } from "hooks/todos/useDeleteTodosMutation";
 
 const TodoContainer = () => {
   let { data: todos } = useTodosQuery();
