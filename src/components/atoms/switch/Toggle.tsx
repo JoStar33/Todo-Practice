@@ -8,7 +8,7 @@ interface Props {
 const Toggle = ({ handleChange, checked }: Props) => {
   return (
     <>
-      <ToggleInput onChange={handleChange} id="toggle" type="checkbox" hidden checked={checked}/>
+      <ToggleInput onChange={handleChange} role="toggle" id="toggle" type="checkbox" hidden checked={checked}/>
       <Switch htmlFor="toggle">
         <Button />
       </Switch>
